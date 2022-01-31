@@ -12,8 +12,13 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    // caso precise do Get alterar 'return MaterialApp(' para
+    // return getMaterialApp(      liberar no pubspec.yaml
+    // nesta aplicação não precisou
+
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -53,6 +58,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Getx Storage'),
+        centerTitle: true,
+        backgroundColor: Colors.purple,
       ),
       body: Center(
         child: Column(
